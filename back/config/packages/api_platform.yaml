@@ -1,5 +1,5 @@
 api_platform:
-    title: Discord web - Api
+    title: Challenge
     version: 1.0.0
     defaults:
         stateless: true

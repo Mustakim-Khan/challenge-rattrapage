@@ -14,12 +14,12 @@ class UserFixtures extends Fixture
 
         $faker = Factory::create('fr_FR');
 
-        $roles= ['ROLE_USER', 'ROLE_MODERATOR', 'ROLE_ADMIN'];
+        $roles= ['ROLE_USER', 'ROLE_ADMIN'];
 
         $pwd = '$2y$13$xRLZ0dJJEJQP9Tw3wH5wvOWe2wVLMFkjGDOHXuEctFp7aBKrfC3K6'; //user
 
         $object = (new User())
-            ->setEmail('user@user.fr')
+            ->setEmail('user1@user.fr')
             ->setUsername('user')
             ->setPassword($pwd)
             ->setRoles(['ROLE_USER'])
@@ -29,10 +29,10 @@ class UserFixtures extends Fixture
 
 
         $object = (new User())
-            ->setEmail('moderator@user.fr')
+            ->setEmail('user2@user.fr')
             ->setUsername('moderator')
             ->setPassword($pwd)
-            ->setRoles(['ROLE_MODERATOR'])
+            ->setRoles(['ROLE_USER'])
             ->setIsVerify(true)
         ;
         $manager->persist($object);
